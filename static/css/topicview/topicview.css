@@ -1,0 +1,127 @@
+div.topic-container{
+    width: 80%;
+    color:white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+div.topic-block{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #363a43;
+    border: 0.5px solid #188754;
+}
+
+div.topic-block h2{
+    text-underline-offset:7px;
+    text-decoration: underline #188754 1.5px ;
+}
+
+div.topic-block p{
+    align-self: flex-start;
+    padding: 20px;
+    font-size: 18px;
+}
+
+div.topic-block span{
+    align-self: flex-end;
+    padding: 20px;
+}
+
+div.topic-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+div.post-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+div.post{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #363a43;
+    border: 0.5px solid #188754;
+    padding: 10px;
+    width: 100%;
+}
+
+div.author-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.likes-block{
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between !important;
+    width: 40px;
+}
+
+h3{
+    font-size: 18px;
+}
+
+span{
+    align-self: flex-end;
+}
+
+button.add-post{
+    height: 40px;
+}
+
+div.post div.post-info{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+div.comment{
+    padding:10px ;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    background-color: #363a43;
+    border: 0.5px solid #188754;
+    margin-top:10px ;
+}
+
+div.comment-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button.like-button{
+    all:unset;
+    display: flex;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    line-height: 1
+}
+
+button.like-button.active{
+    color: black;
+}
+
+a.user-name:hover{
+    color: #188754 !important;
+}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{%block extra_css%}
+<link href="{%static 'css/createtopic/create-form.css'%}" rel='stylesheet'>
+{% endblock %}
+{%block content%}
+<form method="post">{% csrf_token %}
+    <p>Ви впевнені що бажаєте видалити цей об'єкт??</p>
+    {{ form }}
+    <input type="submit" value="Confirm" class='btn btn-outline-danger'>
+</form>
+{%endblock%}

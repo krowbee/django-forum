@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block title%} {{title}} {%endblock%}
+
+{% block extra_css %}
+<link href="{% static 'css/homepage/homepage.css' %}" rel="stylesheet">
+{% endblock %}
+
+{%block content%}
+<div class="category-container">
+ <h1>Категорії</h1>
+{%for category in categories%}
+<div class="category">
+    <h2 class="category-name"><a href="{{category.get_absolute_url}}">{{category.name}}</a></h2>
+    
+    {%for subcategory in category.subcategory.all%}
+    <div class="subcategory">
+        <p><a href="{{subcategory.get_absolute_url}}">{{subcategory.name}}</a></p>
+    </div>
+    {%endfor%}
+
+</div>
+{%endfor%}
+</div>
+{%endblock%}

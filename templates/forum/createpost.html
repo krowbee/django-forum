@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{%block extra_css%}
+<link href="{%static 'css/createtopic/create-form.css'%}" rel='stylesheet'>
+{% endblock %}
+{%block content%}
+<form method="post">
+    <h1>Створити новий пост</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" class='btn btn-outline-success'>
+</form>
+{% endblock %}

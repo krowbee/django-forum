@@ -1,0 +1,49 @@
+form p input, textarea{
+    width: 75%;
+    background:  #363A42;
+    border: 1px solid #188754;
+    outline: none;
+    caret-color: #188754;
+    color: white;
+    resize: none !important;
+}
+
+
+
+form[method=post] {
+    margin: 50px;
+    width: 100%;
+    background-color: #212429;
+    max-width: 800px;
+    border: #188754 1px solid;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+
+}
+form[method=post] p {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form label{
+    color: white;
+}
+
+
+a.text-link{
+    color: #188754 !important;
+    margin: 2px;
+}
+
+a.text-link:hover{
+    color: #1A995C !important;
+    margin: 2px;
+}

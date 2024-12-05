@@ -1,0 +1,44 @@
+{%extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+{% load i18n %}
+
+{%block extra_css%}
+<link href="{%static 'css/createtopic/create-form.css'%}" rel='stylesheet'>
+{%endblock%}
+
+{% block content %}
+  <form method="post">
+    <h2>Створення нового облікового запису</h2>
+    {% csrf_token %}
+    <p>
+        <label>Ім'я користувача</label>
+        {{form.username}}
+    </p>
+    <p>
+        <label>Email (Не обов'язково)</label>
+        {{form.email}}
+    </p>
+    <p>
+        <label>Пароль</label>
+        {{form.password1}}
+    </p>
+    <p>
+        <label>Повторіть пароль</label>
+        {{form.password2}}
+    </p>
+  {% if form.errors %}
+  <div class="form-errors">
+    {{ form.errors.username }}
+    {{ form.errors.email }}
+    {{ form.errors.password1 }}
+    {{ form.errors.password2 }}
+  </div>
+  {% endif %}
+    <p class='d-flex flex-row align-items-center '>У вас вже є обліковий запис? <a href='{% url "account_login" %}' class='text-link'>Увійдіть</a></p>
+    
+    <button type="submit" class="btn btn-outline-success">Створити</button>
+  </form>
+
+  
+{% endblock %}

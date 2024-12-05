@@ -1,0 +1,35 @@
+{%extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{%block extra_css%}
+<link href="{%static 'css/createtopic/create-form.css'%}" rel='stylesheet'>
+{%endblock%}
+
+{% block content %}
+  <form method="post">
+    <h2>Вхід у аккаунт</h2>
+    {% csrf_token %}
+    <p>
+        <label>Ім'я користувача або email</label>
+        {{form.login}}
+    </p>
+    <p>
+        <label>Пароль</label>
+        {{form.password}}
+    </p>
+    <p class="d-flex align-items-center justify-content-center">
+        <label class="mr-2">Запам'ятати цей пристрій</label>
+        {{ form.remember }}
+    </p>
+    <div>
+      {{form.errors.login}}
+      {{form.errors.password}}
+    </div>
+    <p class='d-flex flex-row align-items-center '>Якщо ви забули пароль, ви можете відновити його <a href='{% url "account_reset_password" %}' class='text-link'>Відновити</a></p>
+    
+    <button type="submit" class="btn btn-outline-success">Увійти</button>
+  </form>
+
+  
+{% endblock %}

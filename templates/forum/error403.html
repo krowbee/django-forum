@@ -1,0 +1,17 @@
+{%extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{%block extra_css%}
+<link href="{%static 'css/createtopic/create-form.css'%}" rel='stylesheet'>
+{%endblock%}
+
+{% block content %}
+  <form method="post">
+    <h2>Помилка 403</h2>
+    {% csrf_token %}
+    <p class='d-flex flex-row align-items-center '>У вас немає прав на виконання цієї дії</p>
+  </form>
+
+  
+{% endblock %}
