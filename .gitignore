@@ -1,1 +1,10 @@
-.venv
+*.log
+
+*.pyc
+*.pyo
+__pycache__/
+venv/
+.env/
+.vscode/
+.pytest_cache/
+*.sqlite3
